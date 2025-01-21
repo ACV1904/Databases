@@ -1,7 +1,7 @@
 The first part of the report will develop a relational database management system for a company selling car, new and used, and car accessories. The early diagrams were designed with Lucid Chart app, the normalisation tables were made in Excel and the database was developed with MySQL Workbench software. 
 This coursework should be considered as a first approach to solve the business problem. A suitable launch and evaluation would give enough feedback to fulfil the design and implementation of the database.
 
-**1.	Requirement Analysis**
+## 1.	Requirement Analysis
 
 •	Background Information
 
@@ -69,10 +69,11 @@ After some consideration, we are going to work in the implementation of the tabl
 |                   | PayMethod                                                                                          | Varchar (25)       | Not null     |
 |                   | Date_return                                                                                        | Date               | Not null     |
 
-**2.	Entity Relationship Diagrams**
+## 2.	Entity Relationship Diagrams
+
 After understanding the business needs, the first phase of the design process involves understanding how the tables would relate in the database.
 
-•	Conceptual Entity Relationship Diagram
+### Conceptual Entity Relationship Diagram
 
 We part from the main needs of the company: to sell cars, to sell car accessories and to manage car returns. 
 The table of car sales would need to have the information of the client (customer), the sale agent, which branch the transaction is taking place and the car information. This for each record would make a big table, and some information would repeat, so, car sales would need to be connected to the tables with the information needed. In the end it would contain many customers, many agents, and many cars. 
@@ -83,7 +84,7 @@ Figure 1 shows the conceptual entity relationship diagram of the tables.
 ![Conceptual ERD](https://github.com/ACV1904/Databases/blob/main/figures/ERD-CW-concept.png)
 *Figure 1. Conceptual ERD*
 
-•	Logical Entity Relationship Diagram
+### Logical Entity Relationship Diagram
 
 Now in the logical step, we need to think about the information these tables would contain. For instance, the cars table would contain the unique car ID to identify the car and to call its information from other tables. We must include all the relevant information of the car like car model, car description, cost, if it is new or not, the year it was manufactured, and the manufacturer information. In this stage I decided to make a separate table for manufacturers because a manufacturer may many cars of different models, and the information would repeat if we kept it just in the cars table.
 Figure 2 shows the logical entity relationship diagram, with the attributes of each table. This information would be suitable to present to different audiences and explain the design structure of the database.
@@ -91,7 +92,7 @@ Figure 2 shows the logical entity relationship diagram, with the attributes of e
 ![Logical ERD](https://github.com/ACV1904/Databases/blob/main/figures/ERD-CW-log.png)
 *Figure 2. Logical ERD*
 
-•	Physical Entity Relationship Diagram
+### Physical Entity Relationship Diagram
 
 In the next stage we consider how this information will be implemented in the database. For this we assign a data type and size to each attribute, and we indicate if it is a primary key or foreign key. We also replaced spaces between words for underscores and checked that none of the relationships are many to many. Figure 3 shows the Physical entity relationship diagram with the information for all the attributes. 
 
@@ -99,7 +100,7 @@ In the next stage we consider how this information will be implemented in the da
 *Figure 3. Physical ERD*
 
 
-**3.	Normalisation Tables**
+## 3.	Normalisation Tables
 
 Normalisation is a process used in real world to understand and organise the structure of the database. Usually, the original tables are messy and suffer from data duplication or incompatibility. To fix these problems, we must break the original table on several tables following the rules in Table 2. 
 
@@ -128,7 +129,7 @@ I followed the same procedure for the Accessories sales table, and the results a
 ![Accessories normalisation ERD](https://github.com/ACV1904/Databases/blob/main/figures/Normalisation-accessories.png)
 *Figure 7. Entity relationship diagram of Accessories Sales after normalisation*
 
-**4.	Database Implementation** 
+## 4.	Database Implementation
 
 The implementation of the database was made in MySQL Workbench. It was important to follow an order so the smaller tables, those without foreign keys are created first and the other tables after that. In many cases where errors were made, the tables had to be dropped and the run the cod again until the structure of the database is the designed one.
 
