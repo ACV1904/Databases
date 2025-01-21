@@ -116,13 +116,13 @@ Normalisation is a process used in real world to understand and organise the str
 We will assume that the company was storing their car sales records as in the first table of Figure 4, the unnormalised form (UNF). For the first normalisation (1NF) we separate the information we know would be repeating as the agent’s name and branch information. In the second normalisation (2NF) we separate again the information that would be better organised in an independent table, like the car’s information, we make sure there is a foreign key in each new table to relate to the first one. Finally, in the third normalisation (3NF) we separate the information by entities and eliminate the fields that don’t depend on the key, for instance, the car’s table doesn’t need a car-sales key, because the car sales table would have the car ID as a foreign key. We also check that the tables can’t break any more. After this, we can visualise the resulting tables and their relationships in Figure 5.
 I followed the same procedure for the Accessories sales table, and the results are shown in Figure 6 and Figure 7. 
 
-![Cars normalisation table](https://github.com/ACV1904/Databases/blob/main/figures/Cars%20norm.pdf)
+![Cars normalisation table](https://github.com/ACV1904/Databases/blob/main/figures/Tab-Norm-cars.png)
 *Figure 4. Car sales table normalisation*
 
 ![Cars normalisation ERD](https://github.com/ACV1904/Databases/blob/main/figures/Normalisation-cars.png)
 *Figure 5. Entity relationship diagram of Car Sales after normalisation*
 
-![Accessories normalisation table](https://github.com/ACV1904/Databases/blob/main/figures/Accessories%20norm.pdf)
+![Accessories normalisation table](https://github.com/ACV1904/Databases/blob/main/figures/Tab-Norm-accessories.png)
 *Figure 6. Accessories sales table normalisation*
 
 ![Accessories normalisation ERD](https://github.com/ACV1904/Databases/blob/main/figures/Normalisation-accessories.png)
