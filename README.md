@@ -6,6 +6,6 @@ Database Design and Implementation
 - Implementation in MySQL: SQL scripts create and populate the database, with screenshots for visualization in MySQL Workbench.
 - Functionality Demonstration: The database's functionalities are showcased.
 
- [Code in sql](https://github.com/ACV1904/Databases/02.mwb)
+ [Code in sql](https://github.com/ACV1904/Databases/blob/main/ACV-CW.sql)
  <br />
  [Report](https://github.com/ACV1904/)
