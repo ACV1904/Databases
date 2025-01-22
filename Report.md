@@ -22,8 +22,8 @@ In this case the relational database will be developed in MySQL Workbench, but t
 After some consideration, we are going to work in the implementation of the tables for customers, sales agents, cars, accessories, manufacturers, branches, car sales, accessories sales and car returns, as defined in Table 1.
 
 *Table 1. Data dictionary of entities*
-| **Entity**        | **Description**                                                                                    | **Attributes**     | **Datatype** | **Constraint** |
-| ----------------- | -------------------------------------------------------------------------------------------------- | ------------------ | ------------ | -------------- |
+| **Entity**   | **Description**                                                              | **Attributes**     | **Datatype** | **Constraint** |
+| :----------- | :--------------------------------------------------------------------------- | :----------------- | :----------- |:-------------- |
 | Customers         | Person recorded for buying a car or a car accessory                                                | Customer_ID        | INT          | Primary key    |
 |                   | Customer_Name                                                                                      | Varchar (99)       | Not null     |
 |                   | Customer_Surname                                                                                   | Varchar (99)       | Not null     |
@@ -61,7 +61,7 @@ After some consideration, we are going to work in the implementation of the tabl
 | Branch_ID         | INT                                                                                                | Foreign key        |
 |                   | PayMethod                                                                                          | Varchar (25)       | Not null     |
 |                   | Date_purchase                                                                                      | Date               | Not null     |
-| Car Returns       | Record of the transaction in which a customer returns a car as part of payment for a new purchase. | CarReturn_ID       | INT          | Primary key    |
+| Car Returns       | Record of the transaction in which a customer returns a car as partial payment for a new purchase. | CarReturn_ID       | INT          | Primary key    |
 |                   | Customer_ID                                                                                        | INT                | Foreign key  |
 |                   | Car_ID                                                                                             | INT                | Foreign key  |
 |                   | Agent_ID                                                                                           | INT                | Foreign key  |
@@ -106,11 +106,11 @@ Normalisation is a process used in real world to understand and organise the str
 
 *Table 2. Database normalisation rules.*
 
-| First normal form                                                 | Second normal form                                                                    | Third normal form                                          |
-| ----------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| \-          Eliminate repeating groups in individual tables.      | \-          Create separate tables for sets of values that apply to multiple records. | \-          Eliminate fields that don't depend on the key. |
-| \-          Create a separate table for each set of related data. | \-          Relate these tables with a foreign key.                                   |
-| \-          Identify each set of related data with a primary key. |                                                                                       |
+| First normal form                                | Second normal form                                      | Third normal form                                |
+| :----------------------------------------------- | :------------------------------------------------------ | :----------------------------------------------- |
+| Eliminate repeating groups in individual tables.      | Create separate tables for sets of values that apply to multiple records. | Eliminate fields that don't depend on the key. |
+| Create a separate table for each set of related data. | Relate these tables with a foreign key.                                   |
+| Identify each set of related data with a primary key. |                                                                           |
 
 *Source: Microsoft 365 (2023).*
 
