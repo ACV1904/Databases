@@ -1,5 +1,6 @@
-The first part of the report will develop a relational database management system for a company selling car, new and used, and car accessories. The early diagrams were designed with Lucid Chart app, the normalisation tables were made in Excel and the database was developed with MySQL Workbench software. 
-This coursework should be considered as a first approach to solve the business problem. A suitable launch and evaluation would give enough feedback to fulfil the design and implementation of the database.
+Development of a relational database management system for a company selling cars, new and used, and car accessories. 
+The early diagrams were designed with Lucid Chart app, the normalisation tables were made in Excel and the database was developed with MySQL Workbench software. 
+This work should be considered a first approach to solving the business problem. A suitable launch and evaluation would give feedback to fulfil the design and implementation of the database.
 
 ## 1.	Requirement Analysis
 
